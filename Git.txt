@@ -1,0 +1,52 @@
+1. Git 工作区，暂存区，仓库区  都是在本地的， 远程库不在本地（公司库上，或gethub上）
+2.工作区：实际电脑上工作的目录（本机创建的存放目录）
+3.暂存区：把工作区的代码添加到暂存区，也就是记录工作区代码记录  
+  命令： git add. 上传全部文件  git add xx.js 上传某一个文件
+4.仓库区：把暂存区的文件提交到仓库区，仓库区的文件，才可以，向远程库提交，因为仓库区的存在，所以
+ 在没有网络的情况下，依然可以进行本地的代码管理，然后，联网在上传。
+ 命令： git commit -am (-m ,是每一次提交，都要写说明)，第一次提交 commit 都是一次代码的更新
+ eg: git commit -am '更新了登录验证码的功能，需要要传入参数'
+5.远程仓库区：也就是GitHub上的仓库里
+6.主线开发，首先把上面的版本代码先拿下来，然后，在一起和自己修改的，在一起commit达到 了最新的。
+7.主，分支开发： 主线上控制软件的发布版本。分支线上是每们工程师接交的代码，如果测试通过后，
+ 架构师就把分支上的版本，审核并入主线上。
+8.在主线上，创建分支，就是为每个开发者，启一个开发分支，写测试代码时候，主分支上有更新时，要
+ 拉取主线上的代码，下来测试。
+9.主--分支 ，主线就启一个同步的作用，A，要测试B的功能 ，B提交到主线上，然后，A从主线上拉取B提交
+ 代码。
+10.创建执行的过程：
+	a.首先选择定本地创建的文件，使用git init 初始化，然后设备 config --globla  参数 name ,email,ssl等等
+	b.git clone http://xxxx.xxxx.xxx.xxx. 下载 项目，下载到工作区
+	c.工作区 ---向--》暂存区 提交  git add .  or git add xxx.js 
+	d.查看状态 ：git status
+	e. 斩存区 --向--》仓库区（本地）提交 git commit -am'说明描述'
+ 
+10. 下载代码： git clone https://github.comSea412/MyVueDemo.git
+11.放暂存区的文件，才会追踪文件的变化，是否有修改。 也就是，从工作区提交后的才会跟踪是否修改，
+ 没有提交了，在工作的区的，你怎么修改，都不会记录，有修改
+ 命令：git status  
+  eg :Changes not staged for commit:
+   (use "git add <file>..." to update what will be committed)
+   (use "git restore <file>..." to discard changes in working directory)
+  modified:   long.js  ---> long.js 已经从工作区提交后，之后在工作有一个修改就会：modified
+ 否则：
+ Untracked files:
+   (use "git add <file>..." to include in what will be committed)
+  blog.js--- 》 没有提交工作区，怎么修改，永远都是一个没有追踪的代码
+12. 当提交到仓库区的时候，会跟踪到，仓库区版本比远程区 版本领先，需要提交：
+   eg:$ git status
+ On branch main
+ Your branch is ahead of 'origin/main' by 1 commit.
+   (use "git push" to publish your local commits)
+13.提交远程仓库
+
+
+
+
+
+14. 查看所在分支的本地配置  git config --global -l #查看git的所有配置  
+15. Connection was reset in connection to github.com:443终极解决方案，查看自己博客收藏
+16.拉取远程代码： get pull
+17.本地切换分支 ： git checkout xiaoTest 
+18.暂存区是 是不区分主，子分支的，只区分文件
+19.远程上的子分支，向主分支上，提交代码到主线上
