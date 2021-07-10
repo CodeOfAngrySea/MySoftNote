@@ -20,6 +20,7 @@
 	c.工作区 ---向--》暂存区 提交  git add .  or git add xxx.js 
 	d.查看状态 ：git status
 	e. 斩存区 --向--》仓库区（本地）提交 git commit -am'说明描述'
+	f. 仓库区 --向--》向远程仓库提交，git push origin master  [master ,是远程的那一个仓库]
  
 10. 下载代码： git clone https://github.comSea412/MyVueDemo.git
 11.放暂存区的文件，才会追踪文件的变化，是否有修改。 也就是，从工作区提交后的才会跟踪是否修改，
